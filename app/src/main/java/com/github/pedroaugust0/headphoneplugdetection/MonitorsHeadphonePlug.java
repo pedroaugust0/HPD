@@ -35,17 +35,17 @@ public class MonitorsHeadphonePlug extends Service {
     }
 
     @Override
-    public int onStartCommand(Intent intent, int flags, int stardID){
+    public int onStartCommand(Intent intent, int flags, int startID){
 
         if(!alreadyOn){
             IntentFilter plugFilter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
             registerReceiver(plugReceiver, plugFilter);
             alreadyOn = true;
             Log.i(LOG_TAG, "ON");
-            return super.onStartCommand(intent, flags, stardID);
+            return super.onStartCommand(intent, flags, startID);
         }
         Log.i(LOG_TAG, "Already ON");
-        return super.onStartCommand(intent, flags, stardID);
+        return super.onStartCommand(intent, flags, startID);
     }
 
     @Override
