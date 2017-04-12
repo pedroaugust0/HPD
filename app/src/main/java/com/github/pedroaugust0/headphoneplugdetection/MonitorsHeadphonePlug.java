@@ -28,6 +28,11 @@ public class MonitorsHeadphonePlug extends Service {
         return null;
     }
 
+    @Override
+    public void onCreate(){
+        super.onCreate();
+        Log.i(LOG_TAG, "onDestroy()");
+    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int stardID){
@@ -45,7 +50,9 @@ public class MonitorsHeadphonePlug extends Service {
 
     @Override
     public void onDestroy(){
+        stopMonitor();
         super.onDestroy();
+        Log.i(LOG_TAG, "onDestroy()");
     }
 
     public void stopMonitor(){
@@ -56,7 +63,6 @@ public class MonitorsHeadphonePlug extends Service {
     }
 
     private class PlugReceiver extends BroadcastReceiver{
-
 
         @Override
         public void onReceive(Context context, Intent intent){
@@ -74,4 +80,5 @@ public class MonitorsHeadphonePlug extends Service {
         }
 
     }
+
 }
