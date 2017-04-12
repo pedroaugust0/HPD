@@ -7,3 +7,5 @@
 /build
 /captures
 .externalNativeBuild
+/src/androidTest/java/com/github/pedroaugust0/headphoneplugdetection
+/src/test/java/com/github/pedroaugust0/headphoneplugdetection

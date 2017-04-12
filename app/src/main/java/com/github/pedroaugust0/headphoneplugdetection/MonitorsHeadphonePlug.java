@@ -31,7 +31,7 @@ public class MonitorsHeadphonePlug extends Service {
     @Override
     public void onCreate(){
         super.onCreate();
-        Log.i(LOG_TAG, "onDestroy()");
+        Log.i(LOG_TAG, "onCreate()");
     }
 
     @Override
